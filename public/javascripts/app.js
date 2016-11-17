@@ -11,12 +11,12 @@ angular.module('lyricalApp', [ 'ngRoute'
 
         $routeProvider
             .when('/', {
-                templateUrl: 'ngViews/dashboard.html',
-                controller: 'DashboardCtrl'
-            })
-            .when('/register', {
                 templateUrl: 'ngViews/account.html',
                 controller: 'AccountCreateCtrl'
+            })
+            .when('/dashboard', {
+                templateUrl: 'ngViews/dashboard.html',
+                controller: 'DashboardCtrl'
             });
 
 
