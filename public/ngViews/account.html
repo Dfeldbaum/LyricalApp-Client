@@ -3,7 +3,7 @@
         <a href="file:///Users/Russell/Sites/lyrical/lyrical-fe/index.html">
         <h1>Lyrical</h1>
         </a>
-      <form ng-submit="createAccount(username, email, password)" autocomplete="on" href="/dashboard"> 
+      <form ng-submit="createAccount(username, email, password)" autocomplete="on"> 
           <p> 
             <input id="username" ng-model="username" required="required" type="text" placeholder="Name" /> 
           </p>
@@ -14,9 +14,8 @@
             <input id="password" ng-model="password" required="required" type="password" placeholder="Password" /> 
           </p>
           <p class="login button"> 
-          <input type="submit" value="Register" class="waves-effect waves-light btn" id="button2">
+             <button ng-click="changeRoute()" class="waves-effect waves-light btn" id="button2">Register</button>
             <a href="/" id="button1" class="waves-effect waves-light btn">Go Back</a>
-      
           </p>
       </form>
     </div>
