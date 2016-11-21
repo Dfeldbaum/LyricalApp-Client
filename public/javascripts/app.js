@@ -9,6 +9,10 @@ angular.module('lyricalApp', [ 'ngRoute'
             requireBase: false // good for anything IE9+
         })
 
+        // $httpProvider.defaults.useXDomain = true;
+
+        // delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
         $routeProvider
             .when('/', {
                 templateUrl: 'ngViews/login.html',
@@ -22,6 +26,8 @@ angular.module('lyricalApp', [ 'ngRoute'
                 templateUrl: 'ngViews/dashboard.html',
                 controller: 'DashboardCtrl'
             });
+
+
 
 
         $routeProvider.otherwise({ redirectTo: '/' });
