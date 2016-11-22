@@ -4,9 +4,9 @@
           <p> 
             <input ng-model="query" id="words" class="main-search" id="email" name="email" required="required" type="text" placeholder=""/>
           </p>      
-          <p class="login button"> 
+          <!-- <p class="login button"> 
             <a id="button1" class="waves-effect waves-light btn">Search</a>
-          </p>
+          </p> -->
       </form>
 
 
@@ -14,36 +14,54 @@
     </div>
       <ul id="slide-out" class="side-nav">
       <li><div class="userView">
-      <a href="#"><span class="white-text name"></span></a>
-      <a href="#"><span class="white-text email"></span></a>
     </div></li>
+              <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+
       <li><a class="waves-effect" href="file:///Users/Russell/Sites/lyrical/lyrical-fe/search.html">Search</a></li>
       <li><a class="waves-effect" href="file:///Users/Russell/Sites/lyrical/lyrical-fe/savedlyrics.html">Saved Lyrics</a></li>
       </ul>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> 
     <br>
-<!--           <nav id="navbar">Featured Lyrics</nav>
- -->
+<!--           <nav id="navbar">Featured Lyrics</nav> -->
+
+   <div id="p-testcenter">
+
+  <table>
+    <tr class="p-test">
+      <th><a href="" ng-click="sortField = 'id'; reverse = !reverse">Id</a></th>
+      <th><a href="" ng-click="sortField = 'artist'; reverse = !reverse">Artist</a></th>
+      <th><a href="" ng-click="sortField = 'song'; reverse = !reverse">Song</a></th>
+    </tr>
+
+<tr ng-repeat="lyric in lyrics | filter:query | orderBy:sortField:reverse" class="p-test">
     
-    <div ng-repeat="lyric in lyrics | filter:query">
-      {{lyric.song}}
-      {{lyric.lyrics}}
-      {{lyric.image}}
+      <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.id}}</td>
+      <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.artist}}</td> 
+      <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.song}}</td>
 
-    <div><iframe src="{{lyric.image}}" frameborder="0" allowtransparency="true"></iframe><div>
-  
+
+
+
+ </tr>
+
+  </table>  
+ 
+  </div>
 
     
 
 
-
+  <div class="fade-in two">    
     <div class="carousel">
+        <nav id="navbar">Featured Lyrics</nav>
         <div id="centerthisdiv">
       <a class="carousel-item" href="#one!">
         <div class="card1 blue darken-1">
           <div id="cardcenter" class="card-content white-text">
-            <span class="card-title">Teen Daze</span>
-              <p>Sun Burst</p>
+            <span class="card-title" id="artistname">Bob Marley</span>
+              <p id="songtitle">One Love</p>
+              <p id="albumtitle">Exodus</p>
+
           </div>
         <div class="card-action">
         </div>
@@ -52,6 +70,7 @@
         <div id="cardcenter" class="card-content white-text">
             <span class="card-title">SBTRKT</span>
               <p>Never Never</p>
+              <p>
         </div>
         <div class="card-action">
         </div>
@@ -59,6 +78,7 @@
         <div id="cardcenter" class="card-content white-text">
             <span class="card-title">Beach House</span>
               <p>Walk in the Park</p>
+
         </div>
         <div class="card-action">
         </div>
@@ -82,7 +102,58 @@
   </div>
 
 
+
+<!-- 
+    <form ng-submit="createLyric(artist, song, lyrics, genre, year,  )" autocomplete="on"> 
+        <p> 
+          <input id="username" ng-model="username" required="required" type="text" placeholder="Username" /> 
+        </p>
+        <p> 
+          <input id="password" ng-model="password" required="required" type="password" placeholder="Password" />
+        </p>
+        <p class="login button"> 
+          <a id="button1" class="waves-effect waves-light btn">Login</a>
+          <button type='submit'class="waves-effect waves-light btn" id="button1">Login</button>
+          <button ng-click="changetoRegisterRoute()" class="waves-effect waves-light btn" id="button2">Register</button>
+          <!- <a href="file:///Users/Russell/Sites/lyrical/lyrical-fe/registration.html" id="button2" class="waves-effect waves-light btn">Register</a>
+        </p>
+    </form> --> 
+
+
+
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
       <script type="text/javascript" src="javascripts/materialize.js"></script>
     </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -25,9 +25,13 @@ angular.module('lyricalApp', [ 'ngRoute'
             .when('/dashboard', {
                 templateUrl: 'ngViews/dashboard.html',
                 controller: 'DashboardCtrl'
+
+            })
+            .when('/:id', {
+                templateUrl: 'ngViews/lyrics.html',
+                controller: 'LyricsDetailCtrl'
+
             });
-
-
 
 
         $routeProvider.otherwise({ redirectTo: '/' });
