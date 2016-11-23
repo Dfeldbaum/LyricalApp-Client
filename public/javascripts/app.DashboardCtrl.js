@@ -1,10 +1,31 @@
 angular.module('lyricalApp')
-    .controller('DashboardCtrl', function($scope, $http, $location) {
+    .controller('DashboardCtrl', function($scope, $http, $location, $rootScope) {
 
     $scope.goToLyric = function(id) {
     		console.log('is this working')
             $location.path('/' + id);
     };	
+
+
+     $scope.goToDashboard = function(id) {
+            console.log('back on dashboard')
+            $location.path('/dashboard');
+    };  
+
+
+
+    $scope.goToSavedLyrics = function(id) {
+            console.log('routed to saved lyrics page')
+            $location.path('/mylyrics');
+    };  
+   
+
+
+
+
+
+
+
 
     $scope.goToLogout = function(id) {
             

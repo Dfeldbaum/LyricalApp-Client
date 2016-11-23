@@ -9,33 +9,54 @@
           </p> -->
       </form>
 
-
-
     </div>
       <ul id="slide-out" class="side-nav">
       <li><div class="userView">
     </div></li>
               <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
 
-      <li><a class="waves-effect" href="file:///Users/Russell/Sites/lyrical/lyrical-fe/search.html">Search</a></li>
-      <li><a class="waves-effect" href="file:///Users/Russell/Sites/lyrical/lyrical-fe/savedlyrics.html">Saved Lyrics</a></li>
+      <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
+      <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
       </ul>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> 
     <br>
+<!--           <nav id="navbar">Featured Lyrics</nav> -->
+
+
+
+
+
+
+
+
+
+<!-- OLD SHIT -->
+
+<!--     </div>
+      <ul id="slide-out" class="side-nav">
+      <li><div class="userView">
+    </div></li>
+              <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+
+      <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
+      <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> 
+    <br> -->
 <!--           <nav id="navbar">Featured Lyrics</nav> -->
 
    <div id="p-testcenter">
 
   <table>
     <tr class="p-test">
-      <th><a href="" ng-click="sortField = 'id'; reverse = !reverse">Id</a></th>
+     
       <th><a href="" ng-click="sortField = 'artist'; reverse = !reverse">Artist</a></th>
       <th><a href="" ng-click="sortField = 'song'; reverse = !reverse">Song</a></th>
     </tr>
 
 <tr ng-repeat="lyric in lyrics | filter:query | orderBy:sortField:reverse" class="p-test">
     
-      <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.id}}</td>
+     
       <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.artist}}</td> 
       <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.song}}</td>
 
@@ -55,12 +76,12 @@
     <div class="carousel">
         <nav id="navbar">Featured Lyrics</nav>
         <div id="centerthisdiv">
-      <a class="carousel-item" href="#one!">
+      <a ng-click="goToLyric(2)" class="carousel-item" href="#one!">
         <div class="card1 blue darken-1">
           <div id="cardcenter" class="card-content white-text">
-            <span class="card-title" id="artistname">Bob Marley</span>
-              <p id="songtitle">One Love</p>
-              <p id="albumtitle">Exodus</p>
+            <span class="card-title">Bob Marley</span>
+              <p>One Love</p>
+              <p>Exodus</p>
 
           </div>
         <div class="card-action">

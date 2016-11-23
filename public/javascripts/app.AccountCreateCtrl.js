@@ -1,5 +1,5 @@
 angular.module('lyricalApp')
-    .controller('AccountCreateCtrl', function($scope, $http, $location) {
+    .controller('AccountCreateCtrl', function($scope, $http, $location, $rootScope) {
 
         $scope.changetoRoute = function() {
             $location.path('/dashboard');

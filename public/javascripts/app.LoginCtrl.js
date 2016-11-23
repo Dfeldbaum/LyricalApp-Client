@@ -1,5 +1,7 @@
 angular.module('lyricalApp')
-    .controller('LoginCtrl', function($scope, $http, $location) {
+    .controller('LoginCtrl', function($scope, $http, $location, $rootScope) {
+
+        console.log($rootScope)
 
         $scope.changetoLoginRoute = function() {
             $location.path('/dashboard');
@@ -17,8 +19,11 @@ angular.module('lyricalApp')
                 console.log(results , username, password);
                 if (!results.key) {
                     $scope.message = results.message;
+
                 } else {
                     $scope.message = results.message;
+                    $rootScope.key = results.key;
+                    console.log($rootScope);
                     $scope.changetoLoginRoute();
                 }
             }).error(function(err) {

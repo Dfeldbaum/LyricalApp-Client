@@ -3,7 +3,41 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
- 
+
+
+
+.p-scroll {
+    color: lime;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+    white-space: pre;
+    overflow: hidden;
+    animation: type 4s steps(60, end);
+    color:white;
+    width: 70rem;
+    margin: 0 auto;
+    background: black;
+    font-size: 1.5rem;
+
+}
+
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; }
+}
+
+@keyframes blink{
+    to{opacity: .0;}
+}
+
+
 
  .p-test {
  color:white;
@@ -11,9 +45,12 @@
 
 
   #p-testcenter {
-  width: 840px;
+  width: 750px;
   margin: 0 auto; 
   background: black;
+  height:130px;
+  overflow:scroll;
+  overflow-x:hidden;
   }
 
 
@@ -31,6 +68,20 @@
   }
 
 
+ ::-webkit-scrollbar {
+      background: #212121;
+      width: 8px;
+
+  }
+  ::-webkit-scrollbar-track-piece{
+      background: #212121;
+
+  }
+  ::-webkit-scrollbar-thumb{
+      background: grey;
+  }
+
+
 
 
  body {
@@ -43,9 +94,10 @@
   text-align: center;
  }
  #songtitle {
-  font-size: 16px;
+  font-size: 4rem;
  }
  #artistname {
+  font-size: 2rem;
 
  }
  // #bannerwhite {

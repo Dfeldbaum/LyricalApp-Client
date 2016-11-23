@@ -27,10 +27,22 @@ angular.module('lyricalApp', [ 'ngRoute'
                 controller: 'DashboardCtrl'
 
             })
+
+            .when('/createlyrics', {
+                templateUrl: 'ngViews/addlyric.html',
+                controller: 'LyricCreateCtrl'
+
+            })
+
+            .when('/mylyrics', {
+                templateUrl: 'ngViews/userlyrics.html',
+                controller: 'UserLyricsCtrl'
+
+            })
             .when('/:id', {
                 templateUrl: 'ngViews/lyrics.html',
                 controller: 'LyricsDetailCtrl'
-
+                
             });
 
 

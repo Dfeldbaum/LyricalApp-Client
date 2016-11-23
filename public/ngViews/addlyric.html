@@ -1,0 +1,39 @@
+<body>
+<div id="loginform">
+    <h1>Add Lyric</h1>
+
+
+    <form ng-submit="createLyric(artist, song, lyrics, year, genre, image, user_id)" autocomplete="on">
+        <p>
+            <input id="artist" ng-model="artist" required="required" type="text" placeholder="Artist" />
+        </p>
+        <p>
+            <input id="song" ng-model="song" required="required" type="text" placeholder="Song"/>
+        </p>
+        <p>
+            <input id="lyrics" ng-model="lyrics" required="required" type="text" placeholder="Lyrics" />
+        </p>
+        <p>
+            <input id="year" ng-model="year" required="required" type="text" placeholder="Year" />
+        </p>
+        <p>
+            <input id="genre" ng-model="genre" required="required" type="text" placeholder="Genre"/>
+        </p>
+        <p>
+            <input id="image" ng-model="image" required="required" type="text" placeholder="Image" />
+        </p>
+        <p>
+            <input id="user_id" ng-model="user_id" required="required" type="text" placeholder="User_id" />
+        </p>
+        <p class="login button">
+            <button type='submit' class="waves-effect waves-light btn" id="button2">Add Lyrics</button>
+
+        </p>
+    </form>
+
+
+
+</div>
+
+
+</body>
