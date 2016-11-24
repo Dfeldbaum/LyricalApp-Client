@@ -27,7 +27,7 @@ angular.module('lyricalApp')
          $http({
              url: 'http://localhost:9292/userlyrics/savelyrics',
              method: 'POST',
-             params: { song_id: $routeParams.id, user_id: $rootScope.key }
+             params: { song_id: $routeParams.id, user_id: $rootScope.key}
          }).success(function(results) {
              console.log(results);
                  // $scope.changetoRoute();
@@ -39,6 +39,7 @@ angular.module('lyricalApp')
 
      }
 });
+
 
 
 
