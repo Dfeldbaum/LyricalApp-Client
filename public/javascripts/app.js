@@ -4,14 +4,12 @@ angular.module('lyricalApp', [ 'ngRoute'
     '$routeProvider',
     function($locationProvider, $routeProvider) {
 
+
+
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false // good for anything IE9+
-        })
-
-        // $httpProvider.defaults.useXDomain = true;
-
-        // delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        });
 
         $routeProvider
             .when('/', {
@@ -30,7 +28,7 @@ angular.module('lyricalApp', [ 'ngRoute'
 
             .when('/createlyrics', {
                 templateUrl: 'ngViews/addlyric.html',
-                controller: 'LyricCreateCtrl'
+                controller: 'LyricsCreateCtrl'
 
             })
 
